@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "b9c94de7-7d1a-4374-8d9e-9be7744b036f",
+		"name": "Inbox4us-PostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23295762",
+		"_collection_link": "https://restless-flare-980957.postman.co/workspace/Team-Workspace~bf7b684b-17cb-47e7-8b12-6a41d081b87d/collection/23295762-b9c94de7-7d1a-4374-8d9e-9be7744b036f?action=share&source=collection_link&creator=23295762"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"params\":\r\n    {\r\n        \"name\": \"Vo Anh Luc\",\r\n        \"phone\": \"0123456789\",\r\n        \"email\": \"voanhluc@gmail.com\",\r\n        \"password\": \"12345\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"params\":\r\n    {\r\n        \"email\": \"voanhluc@gmail.com\",\r\n        \"password\": \"12345\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDEsImV4cCI6MTcxNzM4NDQ4N30.9G8B1UVU-pu5Ysme7etv8BHSjbPYN5-s2bLvrB-dYb0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"params\":\r\n    {\r\n        \"room_id\": 1,\r\n        \"checkin_date\": \"2024-06-03 09:00:00\",\r\n        \"checkout_date\": \"2024-06-05 09:00:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8069/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8069",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

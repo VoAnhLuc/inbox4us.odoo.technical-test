@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hotel_room_101" model="hotel.room">
+            <field name="name">101</field>
+            <field name="room_type">single</field>
+            <field name="price_per_night">100.0</field>
+            <field name="status">available</field>
+        </record>
+
+        <record id="hotel_room_102" model="hotel.room">
+            <field name="name">102</field>
+            <field name="room_type">double</field>
+            <field name="price_per_night">150.0</field>
+            <field name="status">booked</field>
+        </record>
+
+        <record id="hotel_room_201" model="hotel.room">
+            <field name="name">201</field>
+            <field name="room_type">suite</field>
+            <field name="price_per_night">250.0</field>
+            <field name="status">available</field>
+        </record>
+
+        <record id="hotel_room_202" model="hotel.room">
+            <field name="name">202</field>
+            <field name="room_type">single</field>
+            <field name="price_per_night">90.0</field>
+            <field name="status">maintenance</field>
+        </record>
+
+        <record id="hotel_room_301" model="hotel.room">
+            <field name="name">301</field>
+            <field name="room_type">double</field>
+            <field name="price_per_night">200.0</field>
+            <field name="status">available</field>
+        </record>
+
+    </data>
+</odoo>
